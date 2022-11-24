@@ -7,7 +7,7 @@ const MORALIS_API_KEY = process.env.MORALIS_API;
 const address = "0x8E74eC33406FCA20c1be7b2A6c4135FC7CfAc9E8";
 const chain = EvmChain.ETHEREUM;
 
-const snapshot = require("./MINING_APES_REWARDS_221025T12.json");
+const snapshot =[];
 
 // Moralis pagination, finds all results
 async function getRecursive(func, params) {
@@ -84,7 +84,7 @@ async function getDemoData() {
     console.log("JSON data is saved.");
   });
 }
-// getDemoData();
+getDemoData();
 
 function diff_days(date) {
   var d1 = new Date(); //"now"
@@ -132,7 +132,6 @@ function calc_rewards_sum() {
   console.log(tokens_count);
 }
 
-calc_rewards_sum();
 function airdrop_reward(days) {
   max_reward = 200;
   const intervals = [59, 119, 179, 239, 299, 359, 1000000];
